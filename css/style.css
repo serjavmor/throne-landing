@@ -4,8 +4,8 @@
     --glass-border: rgba(255, 255, 255, 0.1);
     --text-primary: #ffffff;
     --text-secondary: #b0b0b0;
-    --accent-color: #ff2d55; /* Rosa vibrante */
-    --accent-glow: rgba(255, 45, 85, 0.5);
+    --accent-color: #a855f7; /* Morado vibrante moderno */
+    --accent-glow: rgba(168, 85, 247, 0.4);
     --font-main: 'Inter', sans-serif;
     --font-heading: 'Playfair Display', serif;
 }
@@ -45,9 +45,9 @@ body {
     opacity: 0.3;
 }
 
-.blob-1 { top: -10%; left: -10%; background: #ff2d55; }
-.blob-2 { bottom: -10%; right: -10%; background: #5856d6; }
-.blob-3 { top: 40%; left: 60%; background: #af52de; width: 30vw; height: 30vw; }
+.blob-1 { top: -10%; left: -10%; background: #7c3aed; }
+.blob-2 { bottom: -10%; right: -10%; background: #4c1d95; }
+.blob-3 { top: 40%; left: 60%; background: #a855f7; width: 30vw; height: 30vw; }
 
 /* Glassmorphism Common */
 .glass-card {
