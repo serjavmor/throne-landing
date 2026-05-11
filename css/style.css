@@ -51,6 +51,7 @@ body {
 
 /* Glassmorphism Common */
 .glass-card {
+    background: rgba(20, 20, 22, 0.8); /* Fallback para navegadores sin backdrop-filter */
     background: var(--glass-bg);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
