@@ -1,0 +1,15 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Percha -->
+  <path d="M 150 50 Q 150 20 170 30" fill="none" stroke="black" stroke-width="3"/>
+  <path d="M 100 80 L 150 50 L 200 80" fill="none" stroke="black" stroke-width="3"/>
+  <!-- Outfit (Censurado/Abstacto estilo Paint) -->
+  <path d="M 100 80 L 200 80 L 220 250 L 80 250 Z" fill="pink" stroke="black" stroke-width="4"/>
+  <path d="M 120 250 L 120 350 L 90 380" stroke="black" stroke-width="4" fill="none"/>
+  <path d="M 180 250 L 180 350 L 210 380" stroke="black" stroke-width="4" fill="none"/>
+  <!-- Censura pixelada -->
+  <rect x="110" y="120" width="30" height="30" fill="#fbcfe8"/>
+  <rect x="140" y="150" width="30" height="30" fill="#f472b6"/>
+  <rect x="110" y="180" width="30" height="30" fill="#db2777"/>
+  <text x="50" y="380" font-family="Comic Sans MS" font-size="20" fill="red">Outfit VIP</text>
+</svg>

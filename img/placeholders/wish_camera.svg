@@ -1,0 +1,15 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Trípode -->
+  <line x1="150" y1="200" x2="100" y2="350" stroke="black" stroke-width="5"/>
+  <line x1="150" y1="200" x2="200" y2="350" stroke="black" stroke-width="5"/>
+  <line x1="150" y1="200" x2="150" y2="330" stroke="black" stroke-width="5"/>
+  <!-- Cámara -->
+  <rect x="100" y="120" width="100" height="70" fill="grey" stroke="black" stroke-width="4"/>
+  <circle cx="150" cy="155" r="25" fill="none" stroke="black" stroke-width="4"/>
+  <circle cx="150" cy="155" r="10" fill="blue" opacity="0.5"/>
+  <rect x="170" y="105" width="20" height="15" fill="red"/>
+  <!-- Flash -->
+  <path d="M 120 100 L 100 70 M 150 90 L 150 50 M 180 100 L 200 70" stroke="yellow" stroke-width="5"/>
+  <text x="50" y="380" font-family="Comic Sans MS" font-size="20" fill="black">Para mejores fotos!</text>
+</svg>
