@@ -216,62 +216,83 @@ nav ul li a:hover {
 
 /* Links Section */
 .links-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
 }
-.link-item {
+
+.link-card {
     display: flex;
-    align-items: center;
-    padding: 20px 30px;
+    flex-direction: column;
     text-decoration: none;
     color: var(--text-primary);
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-    gap: 25px;
-}
-
-.link-item:hover {
-    transform: scale(1.03);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.link-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 16px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     overflow: hidden;
-    flex-shrink: 0;
+    height: 100%;
     border: 1px solid var(--glass-border);
 }
 
-.link-img img {
+.link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.link-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
+.link-card:hover .card-img img {
+    transform: scale(1.1);
 }
 
-.link-info p {
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+}
+
+.card-content p {
     font-size: 0.95rem;
     color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.link-info p {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-
-.link-item i.fa-chevron-right {
+.card-btn {
+    margin-top: auto;
+    font-weight: 600;
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    transition: gap 0.3s;
+}
+
+.link-card:hover .card-btn {
+    gap: 12px;
+    color: var(--accent-color);
 }
 
 /* Throne Section */
