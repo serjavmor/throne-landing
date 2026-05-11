@@ -1,0 +1,16 @@
+<svg width="300" height="400" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Trípode del aro -->
+  <line x1="150" y1="200" x2="100" y2="380" stroke="black" stroke-width="5"/>
+  <line x1="150" y1="200" x2="200" y2="380" stroke="black" stroke-width="5"/>
+  <line x1="150" y1="200" x2="150" y2="350" stroke="black" stroke-width="5"/>
+  <!-- El aro de luz -->
+  <circle cx="150" cy="120" r="70" fill="none" stroke="#ddd" stroke-width="20"/>
+  <circle cx="150" cy="120" r="70" fill="none" stroke="yellow" stroke-width="15" opacity="0.6"/>
+  <!-- Soporte para móvil en el centro -->
+  <rect x="140" y="110" width="20" height="40" fill="black"/>
+  <rect x="135" y="100" width="30" height="10" fill="grey"/>
+  <!-- Brillos del aro -->
+  <path d="M 150 40 L 150 20 M 220 120 L 240 120 M 150 200 L 150 220 M 80 120 L 60 120" stroke="orange" stroke-width="4"/>
+  <text x="50" y="380" font-family="Comic Sans MS" font-size="22" fill="black">Luz para brillar!</text>
+</svg>
