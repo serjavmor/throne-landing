@@ -1,0 +1,22 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- Cara feliz -->
+  <circle cx="200" cy="120" r="50" fill="none" stroke="black" stroke-width="5"/>
+  <circle cx="180" cy="110" r="8" fill="black"/>
+  <circle cx="220" cy="110" r="8" fill="black"/>
+  <path d="M 170 140 C 180 160, 220 160, 230 140" fill="none" stroke="black" stroke-width="5"/>
+  <!-- Cuerpo -->
+  <line x1="200" y1="170" x2="200" y2="350" stroke="black" stroke-width="5"/>
+  <!-- Brazos lanzando besos -->
+  <path d="M 200 200 L 120 180 M 120 180 L 100 120" stroke="black" stroke-width="5" fill="none"/>
+  <path d="M 200 200 L 280 180 M 280 180 L 300 120" stroke="black" stroke-width="5" fill="none"/>
+  <!-- Piernas -->
+  <line x1="200" y1="350" x2="150" y2="480" stroke="black" stroke-width="5"/>
+  <line x1="200" y1="350" x2="250" y2="480" stroke="black" stroke-width="5"/>
+  <!-- Fondo de flores -->
+  <circle cx="50" cy="350" r="10" fill="orange"/>
+  <path d="M 50 330 L 70 340 L 70 360 L 50 370 L 30 360 L 30 340 Z" fill="yellow"/>
+  <circle cx="350" cy="400" r="10" fill="red"/>
+  <path d="M 350 380 L 370 390 L 370 410 L 350 420 L 330 410 L 330 390 Z" fill="orange"/>
+  <text x="150" y="50" font-family="Comic Sans MS" font-size="30" fill="blue">KISS!!</text>
+</svg>
