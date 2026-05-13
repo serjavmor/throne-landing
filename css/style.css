@@ -91,20 +91,15 @@ body {
     color: var(--kuromi-text-muted);
 }
 
-/* Links Cards */
-.links-container {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 20px;
-}
-
+/* Links Cards con Efecto Glass */
 .libre-link-card {
     display: flex;
     align-items: center;
     padding: 18px 22px;
-    background: var(--kuromi-card);
-    border: 1px solid var(--kuromi-border);
+    background: rgba(26, 26, 31, 0.6); /* Transparencia sobre el color de la tarjeta */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     text-decoration: none;
     color: var(--kuromi-text);
@@ -114,14 +109,15 @@ body {
 .libre-link-card:hover {
     transform: translateY(-2px);
     border-color: var(--kuromi-pink);
-    background: #23232a;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 73, 219, 0.1); /* Toque rosa al hover */
+    box-shadow: 0 8px 32px rgba(255, 73, 219, 0.2);
 }
 
 .link-icon {
     font-size: 1.4rem;
     width: 36px;
     color: var(--kuromi-pink);
+    filter: drop-shadow(0 0 5px var(--kuromi-pink-glow));
 }
 
 .link-label {
@@ -135,22 +131,23 @@ body {
     color: var(--kuromi-text-muted);
 }
 
-/* Spotlight Effect */
+/* Spotlight Effect Glass */
 .libre-link-card.spotlight {
-    background: linear-gradient(90deg, #d533b3, var(--kuromi-pink));
-    border: none;
-    box-shadow: 0 4px 15px var(--kuromi-pink-glow);
+    background: rgba(213, 51, 179, 0.4);
+    border: 1px solid rgba(255, 73, 219, 0.4);
+    box-shadow: 0 8px 32px var(--kuromi-pink-glow);
 }
 
 .libre-link-card.spotlight .link-icon,
 .libre-link-card.spotlight .link-label,
 .libre-link-card.spotlight .link-external {
     color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .spotlight-badge {
-    background: #ffffff;
-    color: #ff49db;
+    background: var(--kuromi-pink);
+    color: white;
 }
 
 /* Social Footer Icons */
