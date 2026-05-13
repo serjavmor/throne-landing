@@ -1,18 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling para los enlaces de navegación
+    const header = document.querySelector('.libre-header');
+
+    // Efecto de Header Compacto al hacer Scroll
+    const scrollThreshold = 80;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('header-compact');
+        } else {
+            header.classList.remove('header-compact');
+        }
+    });
+
+    // Smooth scrolling para los enlaces de navegación (si existen)
     const navLinks = document.querySelectorAll('nav a');
-    
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+            if (targetId.startsWith('#')) {
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
@@ -30,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const sections = document.querySelectorAll('.section, .glass-card');
-    sections.forEach(section => {
-        section.classList.add('reveal');
-        observer.observe(section);
+    const revealElements = document.querySelectorAll('.libre-link-card, .user-profile');
+    revealElements.forEach(el => {
+        el.classList.add('reveal');
+        observer.observe(el);
     });
 });
