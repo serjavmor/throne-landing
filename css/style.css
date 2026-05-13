@@ -1,11 +1,12 @@
 :root {
-    --libre-bg: #f8fafc;
-    --libre-text: #0f172a;
-    --libre-text-muted: #64748b;
-    --libre-card-bg: #ffffff;
-    --libre-card-border: #e2e8f0;
-    --libre-accent: #6366f1;
-    --libre-spotlight: #4f46e5;
+    --kuromi-bg: #0f0f12;
+    --kuromi-card: #1a1a1f;
+    --kuromi-border: #2a2a32;
+    --kuromi-pink: #ff49db;
+    --kuromi-pink-glow: rgba(255, 73, 219, 0.4);
+    --kuromi-lavender: #b388ff;
+    --kuromi-text: #ffffff;
+    --kuromi-text-muted: #a1a1aa;
     --font-main: 'Inter', sans-serif;
 }
 
@@ -16,8 +17,8 @@
 }
 
 body {
-    background-color: var(--libre-bg);
-    color: var(--libre-text);
+    background-color: var(--kuromi-bg);
+    color: var(--kuromi-text);
     font-family: var(--font-main);
     line-height: 1.5;
     display: flex;
@@ -28,29 +29,41 @@ body {
 
 /* Background refinement */
 .background-blobs {
-    display: none; /* Diseño más limpio para V3 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    display: block; /* Volvemos a los blobs para el efecto dark-pink */
 }
+
+.blob-1 { top: -10%; left: -10%; background: var(--kuromi-pink-glow); }
+.blob-2 { bottom: -10%; right: -10%; background: #4c1d95; }
 
 /* Main Container */
 .libre-main, .libre-header {
     width: 100%;
     max-width: 580px;
     padding: 20px;
+    z-index: 10;
 }
 
 /* Header Style */
 .libre-header {
     text-align: center;
-    padding-bottom: 20px;
+    padding-top: 40px;
 }
 
 .avatar-ring {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 16px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
     padding: 4px;
-    background: linear-gradient(45deg, var(--libre-accent), #a855f7);
+    background: linear-gradient(135deg, var(--kuromi-pink), var(--kuromi-lavender));
     border-radius: 50%;
+    box-shadow: 0 0 20px var(--kuromi-pink-glow);
 }
 
 .user-avatar {
@@ -58,102 +71,86 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid var(--kuromi-bg);
 }
 
 .user-name {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.75rem;
+    font-weight: 800;
     margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    letter-spacing: -0.02em;
 }
 
 .verified-badge {
-    color: #3b82f6;
-    font-size: 1.1rem;
+    color: var(--kuromi-pink);
+    font-size: 1.2rem;
 }
 
 .user-bio {
-    font-size: 0.95rem;
-    color: var(--libre-text-muted);
-    max-width: 400px;
-    margin: 0 auto;
+    font-size: 1rem;
+    color: var(--kuromi-text-muted);
 }
 
 /* Links Cards */
 .links-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    margin-top: 20px;
 }
 
 .libre-link-card {
     display: flex;
     align-items: center;
-    padding: 16px 20px;
-    background: var(--libre-card-bg);
-    border: 1px solid var(--libre-card-border);
-    border-radius: 12px;
+    padding: 18px 22px;
+    background: var(--kuromi-card);
+    border: 1px solid var(--kuromi-border);
+    border-radius: 16px;
     text-decoration: none;
-    color: var(--libre-text);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
+    color: var(--kuromi-text);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .libre-link-card:hover {
-    transform: scale(1.02);
-    border-color: var(--libre-accent);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+    border-color: var(--kuromi-pink);
+    background: #23232a;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .link-icon {
-    font-size: 1.25rem;
-    width: 32px;
-    display: flex;
-    justify-content: center;
-    color: var(--libre-accent);
+    font-size: 1.4rem;
+    width: 36px;
+    color: var(--kuromi-pink);
 }
 
 .link-label {
     flex-grow: 1;
     font-weight: 600;
-    font-size: 1rem;
-    margin-left: 12px;
+    font-size: 1.05rem;
 }
 
 .link-external {
-    font-size: 0.85rem;
-    color: var(--libre-text-muted);
-    opacity: 0.6;
+    font-size: 0.9rem;
+    color: var(--kuromi-text-muted);
 }
 
 /* Spotlight Effect */
 .libre-link-card.spotlight {
-    background: var(--libre-accent);
-    color: white;
+    background: linear-gradient(90deg, #d533b3, var(--kuromi-pink));
     border: none;
+    box-shadow: 0 4px 15px var(--kuromi-pink-glow);
 }
 
 .libre-link-card.spotlight .link-icon,
+.libre-link-card.spotlight .link-label,
 .libre-link-card.spotlight .link-external {
     color: white;
-    opacity: 1;
 }
 
 .spotlight-badge {
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    background: #fbbf24;
-    color: #92400e;
-    font-size: 0.65rem;
-    font-weight: 800;
-    padding: 2px 8px;
-    border-radius: 10px;
-    text-transform: uppercase;
+    background: #ffffff;
+    color: #ff49db;
 }
 
 /* Social Footer Icons */
@@ -165,43 +162,35 @@ body {
 }
 
 .social-footer-icons a {
-    color: var(--libre-text-muted);
-    font-size: 1.4rem;
-    transition: color 0.2s;
+    color: var(--kuromi-text-muted);
+    font-size: 1.6rem;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .social-footer-icons a:hover {
-    color: var(--libre-accent);
+    color: var(--kuromi-pink);
+    transform: translateY(-3px);
 }
 
 /* Footer Style */
 .libre-footer {
-    position: fixed;
-    bottom: 20px;
-    width: 100%;
+    padding: 40px 0;
     text-align: center;
-    pointer-events: none;
 }
 
 .powered-by {
-    pointer-events: auto;
-    font-size: 0.75rem;
-    color: var(--libre-text-muted);
+    font-size: 0.8rem;
+    color: var(--kuromi-text-muted);
     text-decoration: none;
-    padding: 6px 12px;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(4px);
-    border-radius: 20px;
-    border: 1px solid var(--libre-card-border);
+    padding: 8px 16px;
+    background: var(--kuromi-card);
+    border-radius: 30px;
+    border: 1px solid var(--kuromi-border);
 }
 
 .powered-by:hover {
-    color: var(--libre-accent);
-}
-
-/* Override previous styles */
-.glass-footer {
-    display: none;
+    color: var(--kuromi-pink);
+    border-color: var(--kuromi-pink);
 }
 
 /* Footer */
