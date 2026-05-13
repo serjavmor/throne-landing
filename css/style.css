@@ -193,18 +193,18 @@ body {
     border-color: var(--kuromi-pink);
 }
 
-/* Footer */
+/* Footer Corregido para Tema Kuromi */
 footer {
     padding: 40px 20px calc(40px + env(safe-area-inset-bottom));
     text-align: center;
-    border-top: 1px solid #e2e8f0;
-    margin-top: 20px;
-    background: white;
+    border-top: 1px solid var(--kuromi-border);
+    margin-top: 40px;
+    background: transparent;
 }
 
 .disclaimer {
     font-size: 0.8rem;
-    color: #64748b;
+    color: var(--kuromi-text-muted);
     margin-top: 10px;
 }
 
